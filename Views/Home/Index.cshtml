@@ -1,0 +1,22 @@
+﻿@model List<RegistrarProducto>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de productos</h1>
+    
+
+    @if (Model.Count == 0) {
+        <p>No hay productos aún.</p>
+    }
+    
+    
+    @foreach (var solicitud in Model) {
+        if (solicitud.Usuario == null) {
+            <p>Productos disponibles: @solicitud.Nomprod</p>
+        } else {
+            <p>@solicitud.Nomprod</p>
+        }
+    }
+</div>

@@ -1,0 +1,37 @@
+@model RegistrarProducto
+@{
+    ViewData["Title"] = "RegistrarProducto";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h1>Formulario de Registrar Producto</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Nomprod"></label>
+        <input asp-for="Nomprod" class="form-control">
+        <label asp-for="Fotoprod"></label>
+        <input asp-for="Fotoprod" class="form-control">
+        <label asp-for="Descprod"></label>
+        <input asp-for="Descprod" class="form-control">
+        <label asp-for="Precioprod"></label>
+        <input asp-for="Precioprod" class="form-control">
+        <label asp-for="Celular"></label>
+        <input asp-for="Celular" class="form-control">
+        <label asp-for="Lugar"></label>
+        <input asp-for="Lugar" class="form-control">
+        <label asp-for="Nomcomp"></label>
+        <input asp-for="Nomcomp" class="form-control">
+        <label asp-for="Categoriaprod"></label>
+        <select class="form-select" aria-label="Default select example">
+        <option  asp-for="Categoriaprod" selected>Open this select menu</option>
+        <option asp-for="Categoriaprod">Tecnología</option>
+        <option asp-for="Categoriaprod">Arte</option>
+        <option asp-for="Categoriaprod">Ropa</option>
+        <option asp-for="Categoriaprod">Muebles</option>
+        </select>
+    </div>
+    <button class="btn btn-primary">Registrar</button>
+</form>
